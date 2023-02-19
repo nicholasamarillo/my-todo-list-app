@@ -1,0 +1,30 @@
+body{
+    background-color:white;
+    background-image: linear-gradient(45deg, #dde5b6, #a98467);
+    width:100%;
+    height:100vh;
+    font-family: 'Gloock', serif;
+}
+
+header{
+    display:flex;
+    justify-content: center;
+    color: #333d29;
+    font-family: 'Gloock', serif;
+    
+}
+
+.add-task{
+    height:50px;
+    width:200px;
+    background-color:#f0ead2;
+}
+
+.list-group-item{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0ead2;
+    font-family: 'Gloock', serif;
+}
