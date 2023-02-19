@@ -1,13 +1,22 @@
 const addItemButton = document.querySelector(".add-task");
-const deleteButton = document.querySelector(".delete");
+const ulContainer = document.querySelector(".list-group");
+const removeButton = document.querySelector(".remove-task");
 
-deleteButton.addEventListener("click", deleteItem);
+
 addItemButton.addEventListener("click", addItem);
+removeButton.addEventListener("click", removeItem);
+
 
 function addItem(){
-   console.log("added item")
+    const taskInput = prompt("What task are you adding?");
+    const ul = ulContainer;
+    const li = document.createElement("li");
+    li.appendChild(document.createTextNode(taskInput));
+    li.setAttribute("class", "list-group-item");
+    ul.appendChild(li);
 };
 
-function deleteItem(){
-    console.log("deleted item");
+function removeItem(){
+    let ul = document.querySelector(".list-group")
+    ul.removeChild(ul.firstElementChild);
 };

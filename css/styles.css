@@ -1,6 +1,6 @@
 body{
     background-color:white;
-    background-image: linear-gradient(45deg, #dde5b6, #a98467);
+    background-image: linear-gradient(45deg, #d7ffc4, #a98467);
     width:100%;
     height:100vh;
     font-family: 'Gloock', serif;
@@ -11,6 +11,7 @@ header{
     justify-content: center;
     color: #333d29;
     font-family: 'Gloock', serif;
+    margin:25px
     
 }
 
@@ -19,6 +20,13 @@ header{
     width:200px;
     background-color:#f0ead2;
 }
+
+.remove-task{
+    height:50px;
+    width:200px;
+    background-color:#f0d2d2;
+}
+
 
 .list-group-item{
     display:flex;
