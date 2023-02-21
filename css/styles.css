@@ -36,3 +36,11 @@ header{
     background-color: #f0ead2;
     font-family: 'Gloock', serif;
 }
+
+footer{
+    background: #f0ead2;
+    position: fixed;
+    height: 30px;
+    bottom: 0;
+    width: 100%;
+}
