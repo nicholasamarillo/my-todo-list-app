@@ -7,6 +7,10 @@ addItemButton.addEventListener("click", addItem);
 removeButton.addEventListener("click", removeItem);
 
 
+let todoItems = new Array();
+localStorage;
+
+
 function addItem(){
     const taskInput = prompt("What task are you adding?");
     const ul = ulContainer;
@@ -18,22 +22,27 @@ function addItem(){
         li.appendChild(document.createTextNode(taskInput));
         li.setAttribute("class", "list-group-item");
         ul.appendChild(li);
-        const tasks = localStorage.setItem("task", JSON.stringify(taskInput))
-        tasks.localStorage.getItem("name")
-    };
-
-    if (localStorage === null){
-        return;
-    }else{
-        tasks.localStorage.getItem("name")
     }
+    todoItems.push(taskInput);
+    console.log(todoItems);
+    localStorage.setItem( "tasks", JSON.stringify(todoItems))
     
 };
 
 function removeItem(){
     let ul = document.querySelector(".list-group")
     ul.removeChild(ul.firstElementChild);
+    todoItems.shift();
+    console.log(todoItems);
+    localStorage.removeItem("tasks")
 };
 
-localStorage("name", 1)
-localStorage.getItem("name");
+function getStorage(){
+    if (localStorage.list){
+        localStorage.list.split(',').forEach(item => {
+            li.appendChild(document.createTextNode(taskInput));
+            li.setAttribute("class", "list-group-item");
+            ul.appendChild(li);
+        })
+    }
+}
